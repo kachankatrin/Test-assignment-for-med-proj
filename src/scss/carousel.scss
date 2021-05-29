@@ -1,0 +1,136 @@
+.carousel-container {
+    max-width: 1312px;
+    margin: 0 auto 136px;
+    &.container-wrapper {
+        margin-bottom: 136px !important;
+    }
+    .header-title {
+        text-align: center;
+    }
+    .custom-carousel {
+        &-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 56px;
+            .dots {
+                ol {
+                    list-style: none;
+                    width: 100%;
+                    li {
+                        background: linear-gradient(236.84deg, #9C8BEA 1.49%, #544695 105.35%);
+                        border-radius: 50%;
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 10px;
+                        cursor: pointer;
+                        &.dot {
+                            &-xs {
+                                width: 6px;
+                                height: 6px;
+                                opacity: 0.2;  
+                            }
+                            &-s {
+                                width: 6px;
+                                height: 6px;
+                                opacity: 0.3;  
+                            }
+                            &-sm {
+                                width: 8px;
+                                height: 8px;
+                                opacity: 0.4;  
+                            }
+                            &-m {
+                                opacity: 0.5;  
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        &-wrapper {
+            display: flex;
+            width: 100%;
+            position: relative;
+            button {
+                position: relative;
+                border: none;
+                .left-arrow, .right-arrow {
+                    position: absolute;
+                    background-image: url("../components/Arrow.svg");
+                    z-index: 1;
+                    top: calc(50% - 40px);
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 32px;
+                    height: 32px;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                    background-color: white;
+                    border: 1px solid #ddd;
+                    background-position: center;
+                    background-size: 10px;
+                }
+                .right-arrow {
+                    transform: translate(-50%, -50%) scaleX(-1);
+                }
+            }
+        }
+        &-content-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 24px;
+        }
+        &-content {
+            display: flex;
+            transition: all 250ms linear;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .profession-container {
+                margin: 0 16px;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                .img-container {
+                    width: 192px;
+                    height: 192px;
+                    @include s-block() {
+                        width: 192px;
+                        height: 192px;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        @include s-block() {
+                            border-radius: 20px;
+                        }
+                    }
+                }
+                p {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 28px;
+                    text-align: left;
+                    margin: 16px 0;
+                    @include s-block() {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.custom-carousel-content > * {
+    flex-shrink: 0;
+    flex-grow: 1;
+}

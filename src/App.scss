@@ -1,0 +1,61 @@
+@import "./scss/mixins.scss";
+@import "./scss/header.scss";
+@import "./scss/article.scss";
+@import "./scss/carousel.scss";
+@import "./scss/form.scss";
+@import "./scss/footer.scss";
+
+.App {
+  text-align: center;
+  padding-top: 112px;
+  .container-wrapper {
+    max-width: 1312px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    @include xxl-block() {
+      margin: 0 80px;
+    }
+    @include s-block() {
+      margin: 0 16px;
+    }
+  }
+  .flex-container {
+    display: flex;
+  }
+}
+.swiper {
+  &-container {
+    text-align: left;
+    padding-bottom: 35px;
+    &-horizontal {
+      .swiper-pagination-bullets {
+        bottom: 0px;
+        text-align: left;
+        .swiper-pagination-bullet {
+          margin: 0 8px 0 0;
+        }
+      }
+    }
+  }
+  &-pagination-bullet {
+    background: #E2DFEF;
+    opacity: 1;
+    &-active {
+      background: linear-gradient(236.84deg, #9C8BEA 1.49%, #544695 105.35%);
+    }
+  }
+  &-slide {
+    &-active {
+      &:nth-of-type(2) {
+        margin-left: 40px;
+      }
+      &:nth-of-type(3) {
+        margin-left: 80px;
+      }
+      &:last-of-type {
+        margin-left: 120px;
+      }
+    }
+  }
+}

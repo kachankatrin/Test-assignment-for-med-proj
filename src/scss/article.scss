@@ -1,0 +1,47 @@
+.article {
+    &-container {
+        height: 568px;
+        margin-bottom: 152px;
+    }
+    &-text {
+        max-width: 528px;
+        padding-top: 104px;
+        color: #FFFFFF;
+        text-align: left;
+    }
+    &-title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 56px;
+        color: inherit;
+        @include s-block() {
+            font-size: 28px;
+        }
+    }
+    &-content {
+        font-size: 16px;
+        line-height: 24px;
+        color: inherit;
+        margin: 24px 0 32px;
+        max-width: 45ch;
+        @include s-block() {
+            font-size: 14px;
+        }
+    }
+    &-btn {
+        background: linear-gradient(236.84deg, #9C8BEA 1.49%, #544695 105.35%);
+        box-shadow: -4px 4px 15px rgba(129, 103, 227, 0.2);        border-radius: 50px;
+        color: white;
+        padding: 10px 50.5px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        border: none;
+        cursor: pointer;
+        width: fit-content;
+        @include s-block() {
+            font-size: 14px;
+            padding: 8px 56px;
+        }
+    }
+}

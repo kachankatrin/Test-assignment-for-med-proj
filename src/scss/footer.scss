@@ -1,0 +1,12 @@
+footer {
+    background: #3B455A;
+    padding: 64px 0 32px;
+    @include s-block() {
+        padding: 32px 0;
+    }
+    p {
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 20px;
+    }
+}

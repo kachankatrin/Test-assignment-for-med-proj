@@ -1,0 +1,41 @@
+$paragraph-margin-bottom: 0;
+@import '~bootstrap/scss/bootstrap.scss';
+ol,
+ul {
+  padding-left: 0;
+}
+.carousel {
+  margin: 0 auto 160px;
+  max-width: 1312px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 10px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.carousel-control-prev-icon {
+  background-image: url("../components/Arrow.svg");
+}
+.carousel-control-next-icon {
+  transform: scaleX(-1) translate(-50%, -50%);
+  background-image: url("../components/Arrow.svg");
+}
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  background: white;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+.sr-only {
+  display: none;
+}
+.carousel-item {
+  width: 192px;
+  height: 192px;
+}

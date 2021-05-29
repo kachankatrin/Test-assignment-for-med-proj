@@ -1,0 +1,115 @@
+.form-container {
+    margin-bottom: 160px !important;
+    @include s-block() {
+        margin-bottom: 56px !important;
+    }
+    &.container-wrapper {
+        flex-direction: row !important;
+        @include s-block() {
+            flex-wrap: wrap;
+        }
+    }
+    .left-side {
+        width: 41%;
+        margin-right: 32px;
+        @include s-block() {
+            width: 100%;
+            margin-right: 0;
+        }
+        .header-title {
+            margin: 32px 0 24px;
+        }
+        p {
+            text-align: left;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        img {
+            margin-top: 40px;
+            width: 100%;
+        }
+    }
+    .right-side {
+        width: 59%;
+        @include s-block() {
+            width: 100%;
+            margin-top: 16px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            input, textarea {
+                padding: 10px 16px 14px;
+                border: none;
+                border-bottom: 3px dashed rgba(129, 103, 227, 0.2);
+                outline: none;
+                font-style: italic;
+                font-size: 16px;
+                line-height: 24px;
+                color: #8B92AB;
+                &::placeholder {
+                    font-style: italic;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #8B92AB;
+                }
+                &:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0 30px white inset !important;
+                    -webkit-text-fill-color: #8B92AB !important;
+                    font-family: "Roboto", sans-serif;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-style: italic;
+                }
+            }
+            input[type="date"] {
+                position: relative;
+                font-style: italic;
+                font-size: 16px;
+                line-height: 24px;
+                color: #8B92AB;
+            }
+            input[type="date"]::before { 
+                content: attr(data-placeholder);
+                width: 100%;
+                font-style: italic;
+                font-size: 16px;
+                line-height: 24px;
+                color: #8B92AB;
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                background: transparent;
+                bottom: 0;
+                color: transparent;
+                cursor: pointer;
+                height: auto;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+            }
+            input[type="date"]:valid::before { 
+                display: none; 
+            }
+            input:not(input:first-of-type) {
+                margin-top: 32px;
+            }
+            textarea {
+                margin: 64px 0 80px;
+                resize: none;
+                font-style: italic;
+                font-size: 16px;
+                line-height: 24px;
+                color: #8B92AB;
+            }
+            .article-btn {
+                padding: 10px 40px;
+                @include s-block() {
+                    padding: 8px 56px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
